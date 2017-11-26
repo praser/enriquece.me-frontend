@@ -1,0 +1,33 @@
+{
+  "name": "enriquece.me-frontend",
+  "version": "0.0.0",
+  "description": "Front end client for enriquece.me",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praser/enriquece.me-frontend.git"
+  },
+  "keywords": [
+    "finance",
+    "js",
+    "html"
+  ],
+  "author": "Rubens Praser Júnior <praser@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/praser/enriquece.me-frontend/issues"
+  },
+  "homepage": "https://github.com/praser/enriquece.me-frontend#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.17",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  }
+}
