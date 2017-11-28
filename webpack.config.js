@@ -14,6 +14,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
+      filename: 'user-new.html',
       title: 'Enriquece.me - Cadastrar novo usuário',
       template: './src/templates/user/new.html',
       chunks: ['userNew']
