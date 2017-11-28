@@ -4,17 +4,31 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './src/index.js'
+    userNew: './src/js/user-new.js',
+    controllerUsers: './src/js/controllers/users-controller.js',
+    modelUser: './src/js/models/user.js',
+    viewUserNew: './src/js/views/user/new.js',
+    serviceRemote: './src/js/services/remote.js'
   },
   devtool: 'inline-source-map',
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Enriquece.me'
+      title: 'Enriquece.me - Cadastrar novo usuário',
+      template: './src/templates/user/new.html',
+      chunks: ['userNew']
     })
   ],
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.(html)$/,
+        loader: 'html-loader' 
+      }
+    ]
   }
 }
